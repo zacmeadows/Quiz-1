@@ -6,6 +6,7 @@
   </ul>
 <% end %>
 
+<div class="container">
 <%= form_for @user_support do |f| %>
   <div class="form-group">
     <%= f.label :name %>
@@ -30,6 +31,9 @@
   <%= f.radio_button :department, "Technical" %>
   <%= f.label :department, "Technical", :value => "Technical" %>
   <br>
-  <%= f.submit class: "btn btn-primary"%>
+  <div class="button">
+    <%= f.submit class: "btn btn-primary"%>
+  </div>
 <% end %>
+</div>
 

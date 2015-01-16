@@ -1,11 +1,13 @@
-<h1>User Support</h1>
-<hr>
-<% @user_supports.each do |user_support| %>
-  <p>Name: <%= user_support.name %></p>
-  <p>Email: <%= user_support.email %></p>
-  <p>Message: <%= user_support.message %></p>
-  <p>Department: <%= user_support.department %></p>
-  <p><%= link_to "Edit", edit_user_support_path(user_support) %></p>
-  <p><%= link_to "Delete", user_support_path(user_support), method: :delete, data: {confirm: "Are you sure?"} %></p>
+<div class="main">
+  <h1>User Support</h1>
   <hr>
-<% end %>
+  <% @user_supports.each do |user_support| %>
+    <p>Name: <%= user_support.name %></p>
+    <p>Email: <%= user_support.email %></p>
+    <p>Message: <%= user_support.message %></p>
+    <p>Department: <%= user_support.department %></p>
+    <p><%= link_to "Edit", edit_user_support_path(user_support) %></p>
+    <p><%= link_to "Delete", user_support_path(user_support), method: :delete, data: {confirm: "Are you sure?"} %></p>
+    <hr>
+  <% end %>
+</div>
