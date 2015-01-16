@@ -11,7 +11,7 @@ class UserSupportsController < ApplicationController
   def create
     @user_support = UserSupport.new user_support_params
     @user_support.save
-    redirect_to root_path
+    redirect_to root_path notice: "Support request created successfully!"
   end
 
   def edit
