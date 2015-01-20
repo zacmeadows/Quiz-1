@@ -10,8 +10,11 @@ class UserSupportsController < ApplicationController
 
   def create
     @user_support = UserSupport.new user_support_params
-    @user_support.save
-    redirect_to root_path
+    if @user_support.save
+      redirect_to root_path
+    else 
+      render :edit
+    end
   end
 
   def edit
